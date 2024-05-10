@@ -1,0 +1,42 @@
+
+body {
+    background-color: #C4ECD1;
+    margin: 0 auto;
+    width: 80%;
+    padding-top: 80px;
+
+  }
+  
+  .video-container {
+    width: 40%;
+    padding: 10px;
+    background: white;
+    display: inline-block;
+
+  }  
+  .responsive-video {  
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+  }
+  
+  .responsive-video iframe, .responsive-video video {
+    position: absolute;
+    width: 100%;
+    height: 100%;  
+  }
+  .video__img-bg p {
+    color: black; /* Text color */
+    font-size: 20px; /* Font size */
+    line-height: 1.5; 
+  }
+  .video__img-bg {
+    background-image: url('assets/images/crafts.png'); /* Background image */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 50px; /* Adjust padding to add space around the paragraph */
+  }
+  

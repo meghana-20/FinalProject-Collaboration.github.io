@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--FAVICON -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+
+    <!-- BOXICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+    <!--=============== SWIPER CSS ===============--> 
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>Handicrafts</title>
+</head>
+<body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <i class='bx bxs-spa nav__logo-icon'></i> Crafts Hub
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#" class="nav__link active-link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="about.html" class="nav__link">About</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#featured" class="nav__link">Featured</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#new" class="nav__link">New</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#products" class="nav__link">Products</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="video.html" class="nav__link">Craftsmanship Tales</a>
+                    </li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class='bx bx-x' ></i>
+                </div>
+            </div>
+
+            <div class="nav__btns">
+                <!-- Theme change button -->
+                <i class='bx bx-moon change-theme' id="theme-button"></i>
+
+                <div class="nav__shop" id="cart-shop">
+                    <i class='bx bx-shopping-bag' ></i>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-grid-alt' ></i>
+                </div>
+                <div class="nav__shop" id="cart-User">
+                    <button id="logoutButton" class="btn btn-link custom-btn">
+                        <i class="bx bx-log-out-circle"></i>
+                    </button>
+                </div>
+                <div class="nav__link" id="welcomeMessage"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!--==================== CART ====================-->
+    <div class="cart" id="cart">
+        <i class='bx bx-x cart__close' id="cart-close"></i>
+
+        <h2 class="cart__title-center">My Cart</h2>
+
+        <div class="cart__container">
+           <!-- <article class="cart__card">
+                <div class="cart__box">
+                    <img src="assets/images/crafts.jpg" alt="" class="cart__img">
+                </div>
+                <div class="cart__details">
+                    <h3 class="cart__title">EarthCraft Pottery</h3>
+                    <span class="cart__price">$1050</span>
+
+                    <div class="cart__amount">
+                        <div class="cart__amount-content">
+                            <span class="cart__amount-box">
+                                <i class='bx bx-minus' ></i>
+                            </span>
+
+                            <span class="cart__amount-number">1</span>
+
+                            <span class="cart__amount-box">
+                                <i class='bx bx-plus' ></i>
+                            </span>
+                        </div>
+
+                        <i class='bx bx-trash-alt cart__amount-trash' ></i>
+                    </div>
+                </div>
+            </article>-->
+            
+        </div>
+        <div class="cart__footer">
+            <div class="cart__prices">
+                <span class="cart__prices-item" id="cart-item-count">0 items</span>
+                <span class="cart__prices-total" id="cart-total-price">$0</span>
+            </div>
+            <button class="button checkout_button" onclick="proceedToCheckout()">Checkout</button>
+        </div>
+    </div>
+    
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+        <!--==================== HOME ====================-->
+        <section class="home" id="home">
+            <div class="home__container container grid">
+                <div class="home__img-bg">
+                    <img src="assets/images/crafts.png" alt="" class="home__img">
+                </div>
+
+                <div class="home__social">
+                    <a href="https://www.facebook.com/" target="_blank" class="home__social-link">
+                        Facebook
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" class="home__social-link">
+                        Twitter
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank" class="home__social-link">
+                        Instagram
+                    </a>
+                </div>
+
+                <div class="home__data">
+                    <h1 class="home__title">NEW CRAFTS <br> COLLECTIONS </h1>
+                    <p class="home__description">
+                        Introducing the newest additions to our HERTITAGECRAFT LINE series: meticulously crafted artisanal pieces blending timeless elegance with contemporary durability. Discover a fusion of traditional craftsmanship and innovative design, meticulously handcrafted to stand the test of time
+                    </p>
+                    <span class="home__price">$1245</span>
+
+                    <div class="home__btns">
+
+                        <button class="button home__button">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== FEATURED ====================-->
+        <section class="featured section container" id="featured">
+            <h2 class="section__title">
+                Featured
+            </h2>
+
+            <div class="featured__container grid">
+                <article class="featured__card">
+                    <span class="featured__tag">Sale</span>
+
+                    <img src="assets/images/crafts.png" alt="" class="featured__img">
+
+                    <div class="featured__data">
+                        <h3 class="featured__title">EarthCraft Pottery</h3>
+                        <span class="featured__price">$1050</span>
+                    </div>
+
+                    <button class="button featured__button">ADD TO CART</button>
+                </article>
+
+                <article class="featured__card">
+                    <span class="featured__tag">Sale</span>
+
+                    <img src="assets/images/china craft2.jpg" alt="" class="featured__img">
+
+                    <div class="featured__data">
+                        <h3 class="featured__title">Handi Doll</h3>
+                        <span class="featured__price">$250</span>
+                    </div>
+
+                    <button class="button featured__button">ADD TO CART</button>
+                </article>
+
+                <article class="featured__card">
+                    <span class="featured__tag">Sale</span>
+
+                    <img src="assets/images/Native American Craft.jpg" alt="" class="featured__img">
+
+                    <div class="featured__data">
+                        <h3 class="featured__title">Native American Wooven basket</h3>
+                        <span class="featured__price">$890</span>
+                    </div>
+
+                    <button class="button featured__button">ADD TO CART</button>
+                </article>
+            </div>
+        </section>
+
+        <!--==================== STORY ====================-->
+        <section class="story section container">
+            <div class="story__container grid">
+                <div class="story__data">
+                    <h2 class="section__title story__section-title">
+                        Our Story
+                    </h2>
+
+                    <h1 class="story__title">
+                        Experience the Inspirational Crafts of  <br> the Year
+                    </h1>
+
+                    <p class="story__description">
+                        Our latest handmade creations blend contemporary flair with timeless craftsmanship. Explore a diverse array of artisanal presentations, each meticulously crafted to inspire. Unveil the essence of modern artistry and discover your perfect piece today.
+                    </p>
+
+                    <a href="about.html" class="button button--small">Discover</a>
+                </div>
+
+                <div class="story__images">
+                    <img src="assets/images/crafts1.jpg" alt="" class="story__img">
+                    <div class="story__square"></div>
+                </div>
+            </div>
+        </section>
+         <!--==================== New Arrivials ====================-->
+        <section class="new section container" id="new">
+            <h2 class="section__title">
+                New Arrivals
+            </h2>
+            
+            <div class="new__container">
+                <div class="swiper new-swiper">
+                    <div class="swiper-wrapper">
+                        <article class="new__card swiper-slide">
+                            <span class="new__tag">New</span>
+    
+                            <img src="assets/images/crafts2.jpg" alt="" class="new__img">
+    
+                            <div class="new__data">
+                                <h3 class="new__title">Koyya Kraft Wooden Toys</h3>
+                                <span class="new__price">$980</span>
+                            </div>
+    
+                            <button class="button new__button">ADD TO CART</button>
+                        </article>
+
+                        <article class="new__card swiper-slide">
+                            <span class="new__tag">New</span>
+    
+                            <img src="assets/images/dancingdoll.jpeg" alt="" class="new__img">
+    
+                            <div class="new__data">
+                                <h3 class="new__title">Dancing Doll</h3>
+                                <span class="new__price">$1150</span>
+                            </div>
+    
+                            <button class="button new__button">ADD TO CART</button>
+                        </article>
+
+                        <article class="new__card swiper-slide">
+                            <span class="new__tag">New</span>
+    
+                            <img src="assets/images/indocrafts.jpg" alt="" class="new__img">
+    
+                            <div class="new__data">
+                                <h3 class="new__title">TropicaCraft Indonesian Treasure Box</h3>
+                                <span class="new__price">$750</span>
+                            </div>
+    
+                            <button class="button new__button">ADD TO CART</button>
+                        </article>
+
+                        <article class="new__card swiper-slide">
+                            <span class="new__tag">New</span>
+    
+                            <img src="assets/images/oaxacan folk art mexico.jpg" alt="" class="new__img">
+    
+                            <div class="new__data">
+                                <h3 class="new__title">Oaxacan Folk Art</h3>
+                                <span class="new__price">$1590</span>
+                            </div>
+    
+                            <button class="button new__button">ADD TO CART</button>
+                        </article>                       
+                    </div>
+                </div>
+            </div>
+        </section>
+   <!--==================== Products====================-->
+   <section class="products section container" id="products">
+    <h2 class="section__title">
+        Products
+    </h2>
+
+    <div class="products__container grid" id="products__container">
+
+    </div>
+</section>
+       
+        
+
+        <!--==================== TESTIMONIAL ====================-->
+        <section class="testimonial section container">
+            <div class="testimonial__container grid">
+                <div class="swiper testimonial-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="testimonial__card swiper-slide">
+                            <div class="testimonial__quote">
+                                <i class='bx bxs-quote-alt-left' ></i>
+                            </div>
+                            <p class="testimonial__description">
+                                The craftsmanship of these timepieces is unparalleled. Not only do they embody the pinnacle of artisanal excellence, but they also effortlessly keep pace with the latest trends and innovations. Remarkably priced, each piece exudes luxury without compromising quality. Above all, the attentive service ensures that every query is met with care and expertise. Acquiring one of these masterpieces is not just a purchase; it's an investment in craftsmanship, style, and exceptional service
+                            </p>
+                            <h3 class="testimonial__date">March 27. 2021</h3>
+    
+                            <div class="testimonial__perfil">
+                                <img src="assets/img/testimonial1.jpg" alt="" class="testimonial__perfil-img">
+    
+                                <div class="testimonial__perfil-data">
+                                    <span class="testimonial__perfil-name">Jack</span>
+                                    <span class="testimonial__perfil-detail">Master Craftsman</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial__card swiper-slide">
+                            <div class="testimonial__quote">
+                                <i class='bx bxs-quote-alt-left' ></i>
+                            </div>
+                            <p class="testimonial__description">
+                                They stand as the pinnacle of artisanal creation, these timepieces transcend mere accessories. Each embodies a fusion of tradition and innovation, ensuring they remain abreast of the latest trends and advancements. Despite their exceptional quality, their price is remarkably accommodating. Moreover, the unparalleled attention to customer service ensures that every inquiry is met with care and expertise. In acquiring one of these treasures, you not only possess a timepiece but a masterpiece crafted with devotion and skill.
+                            </p>
+                            <h3 class="testimonial__date">March 27. 2021</h3>
+    
+                            <div class="testimonial__perfil">
+                                <img src="assets/img/testimonial2.jpg" alt="" class="testimonial__perfil-img">
+    
+                                <div class="testimonial__perfil-data">
+                                    <span class="testimonial__perfil-name">Jill</span>
+                                    <span class="testimonial__perfil-detail">Craftsman</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial__card swiper-slide">
+                            <div class="testimonial__quote">
+                                <i class='bx bxs-quote-alt-left' ></i>
+                            </div>
+                            <p class="testimonial__description">
+                                They stand as the epitome of artisanal mastery, each timepiece a testament to unparalleled craftsmanship. Always ahead of the curve, they seamlessly blend tradition with the latest innovations and trends. With a price tag that offers both affordability and luxury, acquiring one is a journey of unparalleled value. But what truly sets them apart is the unwavering attention to detail and customer care. Every question is met with dedicated expertise, ensuring a seamless and satisfying experience. They're a reflection of dedication to craft and a commitment to exceeding expectations.
+                            </p>
+                            <h3 class="testimonial__date">March 27. 2021</h3>
+    
+                            <div class="testimonial__perfil">
+                                <img src="assets/img/testimonial3.jpg" alt="" class="testimonial__perfil-img">
+    
+                                <div class="testimonial__perfil-data">
+                                    <span class="testimonial__perfil-name">Jhonny</span>
+                                    <span class="testimonial__perfil-detail">Artist</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-button-next">
+                        <i class='bx bx-right-arrow-alt' ></i>
+                    </div>
+                    <div class="swiper-button-prev">
+                        <i class='bx bx-left-arrow-alt' ></i>
+                    </div>
+                </div>
+
+                <div class="testimonial__images">
+                    <div class="testimonial__square"></div>
+                    <img src="assets/images/indiancrafts.jpeg" alt="" class="testimonial__img">
+                </div>
+            </div>
+        </section>
+
+     
+        <!--==================== NEWSLETTER ====================-->
+        <section class="newsletter section container">
+            <div class="newsletter__bg grid">
+                <div>
+                    <h2 class="newsletter__title">Subscribe Our <br> for Exclusive Offers!</h2>
+                    <p class="newsletter__description">
+                        Don't miss out on your discounts. Subscribe to our email 
+                        newsletter to get the best offers, discounts, coupons, 
+                        gifts and much more.
+                    </p>
+                </div>
+
+                <form action="" class="newsletter__subscribe">
+                    <input type="email" placeholder="Enter your email" class="newsletter__input">
+                    <button class="button">
+                        SUBSCRIBE
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer section">
+        <div class="footer__container container grid">
+            <div class="footer__content">
+                <h3 class="footer__title">Our information</h3>
+
+                <ul class="footer__list">
+                    <li>Grad Lab</li>
+                    <li>NMSU</li>
+                    <li>New Mexico</li>
+                </ul>
+            </div>
+            <div class="footer__content">
+                <h3 class="footer__title">About Us</h3>
+
+                <ul class="footer__links">
+                    <li>
+                        <a href="#" class="footer__link">Support Center</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Customer Support</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Copy Right</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Category</h3>
+
+                <ul class="footer__links">
+                    <li>
+                        <a href="#" class="footer__link">Pottery and Ceramics</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Woodworking</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Textile Arts</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Glass Crafts</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Social</h3>
+
+                <ul class="footer__social">
+                    <a href="https://www.facebook.com/" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-facebook'></i>
+                    </a>
+
+                    <a href="https://twitter.com/" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-twitter' ></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-instagram' ></i>
+                    </a>
+                </ul>
+            </div>
+        </div>
+
+        <span class="footer__copy"></span>
+    </footer>
+
+    <!--=============== SCROLL UP ===============-->
+    <a href="#" class="scrollup" id="scroll-up"> 
+        <i class='bx bx-up-arrow-alt scrollup__icon' ></i>
+    </a>
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>             
+                    
+    <script>// Function to adjust the height of the cart container dynamically
+        function adjustCartHeight() {
+            const cartContainer = document.querySelector('.cart__container');
+            const windowHeight = window.innerHeight;
+            const cartTop = cartContainer.getBoundingClientRect().top;
+            const maxHeight = windowHeight - cartTop - 20; // Adjust 20px for padding and margins
+        
+            cartContainer.style.maxHeight = maxHeight + 'px';
+        }
+        
+        // Call the adjustCartHeight function when the window is resized
+        window.addEventListener('resize', adjustCartHeight);
+        
+        // Call the adjustCartHeight function when the DOM content is loaded
+        document.addEventListener('DOMContentLoaded', adjustCartHeight);
+        
+        function updateCartFooterPosition() {
+        const cart = document.getElementById('cart');
+        const cartContainer = document.querySelector('.cart__container');
+        const cartFooter = document.querySelector('.cart__footer');
+
+        const cartHeight = cart.getBoundingClientRect().height;
+        const cartContainerHeight = cartContainer.getBoundingClientRect().height;
+
+        if (cartContainerHeight < cartHeight) {
+            cartFooter.style.position = 'fixed';
+            cartFooter.style.bottom = '0';
+        } else {
+            cartFooter.style.position = 'static';
+        }
+    }
+
+    // Initial call to update cart footer position
+    updateCartFooterPosition();
+
+    // Listen for scroll events on the cart container
+    document.querySelector('.cart__container').addEventListener('scroll', function() {
+        updateCartFooterPosition();
+    });
+        </script>
+<script>
+// Select the button element
+var cartUser = document.getElementById('cart-User'); // Corrected id name
+
+// Add click event listener
+cartUser.addEventListener('click', function() { // Corrected variable name
+    var isLoggedIn = false;
+    // Redirect to login.html
+    if (!isLoggedIn) {
+    window.location.href = 'index.html';
+    }
+    else{
+        window.location.reload();
+    }
+});
+
+var globalUsername = null;
+
+// Extract username from URL query parameter
+const urlParams = new URLSearchParams(window.location.search);
+const username = urlParams.get('username');
+
+if (username) {
+    globalUsername = username;
+}
+
+// Display welcome message
+const welcomeMessage = document.getElementById('welcomeMessage');
+welcomeMessage.innerText = `Welcome ${globalUsername || ''}`;
+
+
+
+function proceedToCheckout() {
+    var itemCount = document.getElementById("cart-item-count").textContent.split(" ")[0];
+    if (parseInt(itemCount) > 0) {
+        // Redirect to checkout.html if there are items in the cart
+        window.location.href = "checkout.html";
+    } else {
+        // Show alert to add items to cart if cart is empty
+        alert("Please add items to your cart before proceeding to checkout.");
+    }
+}
+</script>
+
+
+<!-- ===========================to fetch products for database and add to cart functionalities===================== -->
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        fetchProducts();
+
+        async function fetchProducts() {
+            try {
+                const response = await fetch('/images');
+                if (!response.ok) {
+                    throw new Error('Failed to fetch');
+                }
+                const products = await response.json();
+                const productsContainer = document.getElementById('products__container');
+                if (productsContainer) {
+                    productsContainer.innerHTML = '';  // Clear existing content
+                    products.forEach(product => {
+                        const imagePath = product.filePath.replace(/\\/g, '/');
+                        // Generate a unique ID for each product
+                        const productId = generateProductId();
+                        const productHTML = `
+                            <article class="products__card">
+                                <img src="/${imagePath}" alt="${product.title}" class="products__img">
+                                <h3 class="products__title">${product.title}</h3>
+                                <span class="products__price">$${product.price}</span>
+                                <button class="products__button" data-product-id="${productId}">
+                                    Add to Cart
+                                </button>
+                            </article>`;
+                        productsContainer.innerHTML += productHTML;
+                    });
+
+                    // Add event listeners to the dynamically created buttons
+                    const addToCartButtons = document.querySelectorAll('.products__button');
+                    addToCartButtons.forEach(button => {
+                        button.addEventListener('click', addToCart);
+                    });
+                } else {
+                    console.error('products__container element not found');
+                }
+            } catch (error) {
+                console.error('Failed to fetch products:', error);
+            }
+        }
+
+        function generateProductId() {
+            // Generate a random alphanumeric string as the product ID
+            return Math.random().toString(36).substr(2, 9);
+        }
+
+        // Example cart array to hold added products
+        const cart = [];
+
+        // Function to update the UI with cart changes
+        function updateCartUI() {
+            const cartContainer = document.querySelector('.cart__container');
+            const totalItems = document.getElementById('cart-item-count');
+            const totalPrice = document.getElementById('cart-total-price');
+
+            // Clear existing cart items
+            cartContainer.innerHTML = '';
+
+            // Loop through the cart array and add each item to the cart UI
+            cart.forEach(item => {
+                const cartItem = document.createElement('article');
+                cartItem.classList.add('cart__card');
+
+                cartItem.innerHTML = `
+                    <div class="cart__box">
+                        <img src="${item.image}" alt="" class="cart__img">
+                    </div>
+                    <div class="cart__details">
+                        <h3 class="cart__title">${item.title}</h3>
+                        <span class="cart__price">$${item.price.toFixed(2)}</span>
+                        <div class="cart__amount">
+                            <div class="cart__amount-content">
+                                <span class="cart__amount-box minus" data-product-id="${item.id}">
+                                    <i class='bx bx-minus'></i>
+                                </span>
+                                <span class="cart__amount-number">${item.quantity}</span>
+                                <span class="cart__amount-box plus" data-product-id="${item.id}">
+                                    <i class='bx bx-plus'></i>
+                                </span>
+                            </div>
+                            <button class='bx bx-trash-alt cart__amount-trash' data-product-id="${item.id}"></button>
+                        </div>
+                    </div>
+                `;
+
+                cartContainer.appendChild(cartItem);
+            });
+
+            // Update total number of items and total price
+            const totalQuantity = cart.reduce((acc, item) => acc + item.quantity, 0);
+            const totalPriceAmount = cart.reduce((acc, item) => acc + (item.price * item.quantity), 0);
+// Store total amount in localStorage
+            localStorage.setItem("totalAmount", totalPriceAmount.toFixed(2));
+            totalItems.textContent = `${totalQuantity} item${totalQuantity !== 1 ? 's' : ''}`;
+            totalPrice.textContent = `$${totalPriceAmount.toFixed(2)}`;
+
+            // Add event listeners for +, -, and trash icons
+            const minusButtons = document.querySelectorAll('.cart__amount-box.minus');
+            minusButtons.forEach(button => {
+                button.addEventListener('click', decreaseQuantity);
+            });
+
+            const plusButtons = document.querySelectorAll('.cart__amount-box.plus');
+            plusButtons.forEach(button => {
+                button.addEventListener('click', increaseQuantity);
+            });
+
+            const trashButtons = document.querySelectorAll('.cart__amount-trash');
+            trashButtons.forEach(button => {
+                button.addEventListener('click', removeFromCart);
+            });
+        }
+
+        // Function to decrease the quantity of an item in the cart
+        // Function to decrease the quantity of an item in the cart
+function decreaseQuantity(event) {
+    const productId = event.target.closest('.cart__amount').querySelector('.cart__amount-box').dataset.productId;
+    const item = cart.find(item => item.id === productId);
+    if (item && item.quantity > 1) {
+        item.quantity--;
+        updateCartUI();
+    }
+}
+
+// Function to increase the quantity of an item in the cart
+function increaseQuantity(event) {
+    const productId = event.target.closest('.cart__amount').querySelector('.cart__amount-box').dataset.productId;
+    const item = cart.find(item => item.id === productId);
+    if (item) {
+        item.quantity++;
+        updateCartUI();
+    }
+}
+
+        // Function to remove an item from the cart
+        function removeFromCart(event) {
+            const productId = event.target.dataset.productId;
+            const index = cart.findIndex(item => item.id === productId);
+            if (index !== -1) {
+                cart.splice(index, 1);
+                updateCartUI();
+            }
+        }
+
+        function addToCart(event) {
+            const productContainer = event.target.closest('.products__card');
+            const image = productContainer.querySelector('.products__img').src;
+            const title = productContainer.querySelector('.products__title').textContent;
+            const price = parseFloat(productContainer.querySelector('.products__price').textContent.replace('$', ''));
+
+            console.log(`Adding to cart: ${title}`);
+
+            // Perform the logic to add the product to the cart
+            // For demonstration, let's assume there's a global cart array
+            // where we'll store the added products
+
+            // Check if the product is already in the cart
+            const existingCartItem = cart.find(item => item.title === title);
+
+            if (existingCartItem) {
+                // If the product is already in the cart, update its quantity
+                existingCartItem.quantity++;
+            } else {
+                // If the product is not in the cart, add it as a new item
+                const newItem = {
+                    image: image,
+                    title: title,
+                    price: price,
+                    quantity: 1,
+                    id: event.target.dataset.productId  // Using product ID
+                };
+                cart.push(newItem);
+            }
+
+            // Now, you can update the UI to reflect the changes in the cart
+            // For example, you might update a mini-cart display or trigger
+            // a UI refresh to show the updated cart content.
+            updateCartUI();
+        }
+        function addToCartNewArrivalsAndFeatured(event) {
+        const productContainer = event.target.closest('.new__card, .featured__card');
+        const image = productContainer.querySelector('.new__img, .featured__img').src;
+        const title = productContainer.querySelector('.new__title, .featured__title').textContent;
+        const price = parseFloat(productContainer.querySelector('.new__price, .featured__price').textContent.replace('$', ''));
+
+        // Check if the product is already in the cart
+        const existingCartItem = cart.find(item => item.title === title);
+
+        if (existingCartItem) {
+            // If the product is already in the cart, update its quantity
+            existingCartItem.quantity++;
+        } else {
+            // If the product is not in the cart, add it as a new item
+            const newItem = {
+                image: image,
+                title: title,
+                price: price,
+                quantity: 1,
+                id: generateProductId()  // Generate a new product ID
+            };
+            cart.push(newItem);
+        }
+
+        // Update the UI to reflect the changes in the cart
+        updateCartUI();
+    }
+
+    // Add event listeners for "ADD TO CART" buttons of "New Arrivals" and "Featured" sections
+    const newArrivalsButtons = document.querySelectorAll('.new__button');
+    newArrivalsButtons.forEach(button => {
+        button.addEventListener('click', addToCartNewArrivalsAndFeatured);
+    });
+
+    const featuredButtons = document.querySelectorAll('.featured__button');
+    featuredButtons.forEach(button => {
+        button.addEventListener('click', addToCartNewArrivalsAndFeatured);
+    });
+    function addToCartHome(event) {
+        const productContainer = event.target.closest('.home__container');
+        const image = productContainer.querySelector('.home__img').src;
+        const title = productContainer.querySelector('.home__title').textContent;
+        const price = parseFloat(productContainer.querySelector('.home__price').textContent.replace('$', ''));
+
+        // Check if the product is already in the cart
+        const existingCartItem = cart.find(item => item.title === title);
+
+        if (existingCartItem) {
+            // If the product is already in the cart, update its quantity
+            existingCartItem.quantity++;
+        } else {
+            // If the product is not in the cart, add it as a new item
+            const newItem = {
+                image: image,
+                title: title,
+                price: price,
+                quantity: 1,
+                id: generateProductId()  // Generate a new product ID
+            };
+            cart.push(newItem);
+        }
+
+        // Update the UI to reflect the changes in the cart
+        updateCartUI();
+    }
+
+    // Add event listener for "ADD TO CART" button in the home section
+    const homeButton = document.querySelector('.home__button');
+    homeButton.addEventListener('click', addToCartHome);
+
+});
+</script>
+
+</body>
+</html>

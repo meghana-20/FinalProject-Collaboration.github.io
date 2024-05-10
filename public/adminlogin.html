@@ -1,0 +1,22 @@
+<!-- adminlogin.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Admin Login</h1>
+        <form id="adminLoginForm" action="/admin/login" method="post">
+            <input type="text" name="username" id="adminUsername" placeholder="Admin Username" required>
+            <input type="password" name="password" id="adminPassword" placeholder="Admin Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script src="js/adminlogin.js"></script>
+</body>
+</html>

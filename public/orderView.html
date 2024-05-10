@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Orders</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid orange;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>View Orders</h1>
+    <table id="orders-table">
+        <thead>
+            <tr>
+                <th>Order Number</th>
+                <th>Full Name</th>
+                <th>Email</th>
+                <!--<th>Total Amount</th>-->
+            </tr>
+        </thead>
+        <tbody id="orders-list">
+            <!-- Orders will be dynamically inserted here -->
+        </tbody>
+    </table>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("/get-orders") // Assuming this route is available in your backend
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error("Network response was not ok");
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    const ordersList = document.getElementById("orders-list");
+
+                    // Clear existing orders list
+                    ordersList.innerHTML = "";
+
+                    // Process fetched orders data and append to ordersList
+                    data.orders.forEach(order => {
+                        const orderRow = document.createElement("tr");
+                        orderRow.innerHTML = `
+                            <td>${order.orderNumber}</td>
+                            <td>${order.fullName}</td>
+                            <td>${order.email}</td>
+                        `;
+                        ordersList.appendChild(orderRow);
+                    });
+                })
+                .catch(error => {
+                    console.error("Error fetching orders:", error);
+                    const ordersList = document.getElementById("orders-list");
+                    ordersList.innerHTML = "<tr><td colspan='4'>Error fetching orders. Please try again later.</td></tr>";
+                });
+        });
+    </script>
+</body>
+</html>
+<!--<td>${order.totalAmount !== null && order.totalAmount !== undefined ? '$' + order.totalAmount.toFixed(2) : 'N/A'}</td>-->
